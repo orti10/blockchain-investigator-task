@@ -16,55 +16,8 @@ interface GraphViewProps {
 const GraphView = (props: GraphViewProps) => {
   const graphRef = useRef<any>();
   const [graphData, setGraphData] = useState<GraphData>({
-    // nodes: [],
-    // links: [],
-    nodes: [
-      {
-        id: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-        label: "Root",
-        type: "address",
-        data: {
-          address:
-            "bc1pqz6kq8r6l9kmcleuzgzqrrfhmzfx2k0mvkgn8gvd3r74q0rq9fxs8460hk",
-          final_balance: 49706,
-          total_received: 49706,
-          total_sent: 49706,
-          n_tx: 1,
-          txs: [],
-          hash160: "",
-        },
-      },
-      { id: "A", label: "Node A", type: "transaction" },
-      { id: "B", label: "Node B", type: "transaction" },
-      { id: "C", label: "Node C", type: "transaction" },
-      { id: "D", label: "Node D", type: "transaction" },
-    ],
-    links: [
-      {
-        source: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-        target: "A",
-        value: 1,
-        txHash: "tx1",
-      },
-      {
-        source: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-        target: "B",
-        value: 1,
-        txHash: "tx2",
-      },
-      {
-        source: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-        target: "C",
-        value: 1,
-        txHash: "tx3",
-      },
-      {
-        source: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-        target: "D",
-        value: 1,
-        txHash: "tx4",
-      },
-    ],
+    nodes: [],
+    links: [],
   });
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -134,7 +87,7 @@ const GraphView = (props: GraphViewProps) => {
   useEffect(() => {
     if (props.selectedAddress) {
       processedTxs.current.clear();
-      // setGraphData({ nodes: [], links: [] });
+      setGraphData({ nodes: [], links: [] });
     }
   }, [props.selectedAddress]);
 
