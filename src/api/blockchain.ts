@@ -35,12 +35,3 @@ export const fetchAddressData = async (
     throw err;
   }
 };
-
-export const satoshisToBtc = (sats: number) => sats / 1e8;
-
-export const formatNumber = (num: number) => num.toLocaleString();
-
-export const shortenAddress = (address: string, chars = 6) =>
-  address.length <= chars * 2
-    ? address
-    : `${address.slice(0, chars)}...${address.slice(-chars)}`;

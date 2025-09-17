@@ -1,4 +1,3 @@
-import { satoshisToBtc } from "api/blockchain";
 import { GraphNode, GraphLink, GraphData } from "../types/types";
 import { ProcessTransactionsParams } from "../types/types";
 
@@ -7,8 +6,17 @@ export const isValidBitcoinAddress = (addr: string) =>
     addr
   );
 
+export const convertSatsToBtc = (sats: number) => sats / 1e8;
+
+export const formatNumber = (num: number) => num.toLocaleString();
+
+export const shortenAddress = (address: string, chars = 6) =>
+  address.length <= chars * 2
+    ? address
+    : `${address.slice(0, chars)}...${address.slice(-chars)}`;
+
 export const formatBtc = (satoshis: number): string =>
-  `${satoshisToBtc(satoshis).toFixed(8)} BTC`;
+  `${convertSatsToBtc(satoshis).toFixed(8)} BTC`;
 
 export const formatDate = (timestamp: number): string =>
   new Date(timestamp * 1000).toLocaleString();

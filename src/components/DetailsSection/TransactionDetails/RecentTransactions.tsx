@@ -1,8 +1,7 @@
 import React from "react";
 import { Typography, Paper } from "@mui/material";
 import constants from "../../../types/constants";
-import { shortenAddress } from "api/blockchain";
-import { formatDate } from "utils/utils";
+import { formatDate, shortenAddress } from "utils/utils";
 import "../../DetailsSection/DetailsSection.css";
 
 interface RecentTransactionsProps {

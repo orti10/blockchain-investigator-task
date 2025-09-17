@@ -1,8 +1,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import constants from "../../../types/constants";
-import { formatNumber } from "../../../api/blockchain";
-import { formatBtc } from "../../../utils/utils";
+import { formatBtc, formatNumber } from "../../../utils/utils";
 import "../../DetailsSection/DetailsSection.css";
 
 interface AddressStatsProps {

@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
-import { shortenAddress } from "api/blockchain";
-import { formatBtc } from "utils/utils";
+import { formatBtc, shortenAddress } from "utils/utils";
 import "../../DetailsSection/DetailsSection.css";
 
 const IOList = ({
