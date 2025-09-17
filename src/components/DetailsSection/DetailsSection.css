@@ -1,0 +1,175 @@
+.address-details {
+    padding:3;
+    text-align: center;
+    color: "text.secondary";        
+}
+.address-header {
+    margin-bottom: 16px;
+}
+
+.address-header .address-label {
+    word-break: break-all;
+}
+
+.address-header .address-chip {
+    margin-top: 8px;
+}
+
+.address-header .address-subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.875rem;
+}
+
+.address-info {
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.address-info-title {
+    margin-bottom: 16px;
+}
+
+.address-info-divider {
+    margin-bottom: 16px;
+}
+
+.address-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.stat-value.bold {
+    font-weight: bold;
+}
+
+.recent-transactions {
+    margin-top: 24px;
+}
+
+.recent-transactions-title {
+    margin-bottom: 8px;
+}
+
+.recent-transactions-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.recent-transaction-item {
+    padding: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.recent-transaction-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.recent-transaction-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-transaction-hash {
+    font-family: monospace;
+}
+
+.recent-transaction-date {
+    color: rgba(0, 0, 0, 0.6);
+}
+    
+
+.transaction-info {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.transaction-info-title {
+    margin-bottom: 20px;
+}
+
+.transaction-info-header {
+    margin-bottom: 20px;
+}
+
+.transaction-info-label {
+    color: rgba(244, 237, 237, 0.6);
+    font-weight: 500;
+}
+
+.transaction-info-hash {
+    word-break: break-all;
+    margin-bottom: 20px;
+}
+
+.info-row {
+    margin-bottom: 20px;
+}
+
+.info-label {
+    color: rgba(244, 237, 237, 0.6);
+    font-weight: 500;
+}
+
+.info-value {
+    font-weight: normal;
+}
+
+.transaction-io-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.io-list {
+    margin-bottom: 16px;
+}
+
+.io-list-title {
+    color: rgba(244, 237, 237, 0.6);
+    font-weight: 500;
+}
+
+.io-list-items {
+    max-height: 150px;
+    margin-top: 8px;
+    overflow-y: auto;
+}
+
+.io-list-item {
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.io-list-item-address {
+    font-family: monospace;
+}
+
+.io-list-item-value {
+    font-size: 0.875rem;
+}

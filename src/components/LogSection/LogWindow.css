@@ -1,0 +1,61 @@
+.log-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--mui-background-paper, #000000);
+}
+
+.log-container.collapsed {
+    transform: translateY(calc(100% - 40px));
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--mui-divider, #000000);
+    cursor: pointer;
+}
+
+.log-header:hover {
+    background-color: var(--mui-action-hover, #000000);
+}
+
+.log-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    background-color: var(--mui-background-default, #000000);
+}
+
+.log-entry {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.log-entry:last-child {
+    margin-bottom: 0;
+}
+
+.timestamp {
+    color: var(--mui-text-secondary, #999);
+    white-space: nowrap;
+    font-family: monospace;
+}
+
+.message {
+    flex: 1;
+    word-break: break-word;
+    font-family: monospace;
+}
